@@ -6,7 +6,7 @@ import {
 } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactNode } from "react";
-import { AuthProvider } from "./AuthProvider";
+import { AuthProvider } from "./auth/AuthProvider";
 import { OctoProvider } from "./OctoProvider";
 
 const queryClient = new QueryClient();
