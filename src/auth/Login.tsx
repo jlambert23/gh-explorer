@@ -30,7 +30,7 @@ export const Login = () => {
       minHeight="100vh"
       textAlign="center"
     >
-      <Text fontSize="5xl">Welcome to GitHub Milestones</Text>
+      <Text fontSize="5xl">Welcome to GitHub Explorer 🐙</Text>
       <Text fontSize="2xl" marginBottom="12">
         Please login with your GitHub account to continue
       </Text>
