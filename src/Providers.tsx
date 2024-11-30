@@ -6,6 +6,7 @@ import {
 } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactNode } from "react";
+import { AuthProvider } from "./AuthProvider";
 import { OctoProvider } from "./OctoProvider";
 
 const queryClient = new QueryClient();
@@ -23,9 +24,11 @@ const chakraSystem = createSystem(chakraConfig);
 export const Providers = ({ children }: { children: ReactNode }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <OctoProvider>
-        <ChakraProvider value={chakraSystem}>{children}</ChakraProvider>
-      </OctoProvider>
+      <AuthProvider>
+        <OctoProvider>
+          <ChakraProvider value={chakraSystem}>{children}</ChakraProvider>
+        </OctoProvider>
+      </AuthProvider>
     </QueryClientProvider>
   );
 };
