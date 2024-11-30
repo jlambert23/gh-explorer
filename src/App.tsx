@@ -1,5 +1,6 @@
 import { Link as ChakraLink, Container } from "@chakra-ui/react";
-import { Link, Redirect, Route, Switch } from "wouter";
+import { Link, Route, Switch } from "wouter";
+import { Login } from "./auth/Login";
 import { MilestoneDetails } from "./milestones/MilestoneDetails";
 import { Milestones } from "./milestones/Milestones";
 import { Repositories } from "./repos/Repositories";
@@ -8,9 +9,7 @@ function App() {
   return (
     <Container paddingBlock="1rem" className="dark">
       <Switch>
-        <Route path="/">
-          <Redirect to="/repos" />
-        </Route>
+        <Route path="/" component={Login} />
         <Route path="/repos" component={Repositories} />
         <Route path="/repos/:id/milestones">
           {(params) => (
