@@ -32,7 +32,7 @@ export const Login = () => {
     >
       <Text fontSize="5xl">Welcome to GitHub Explorer 🐙</Text>
       <Text fontSize="2xl" marginBottom="12">
-        Please login with your GitHub account to continue
+        Please login with your GitHub account to get started
       </Text>
       <Button
         colorPalette="blue"
