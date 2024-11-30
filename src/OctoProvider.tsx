@@ -3,7 +3,7 @@ import { Octokit } from "octokit";
 import { createContext, ReactNode, useContext } from "react";
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
+  auth: "token-goes-here",
 });
 
 const OctoContext = createContext(new Octokit());
